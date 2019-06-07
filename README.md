@@ -1,3 +1,9 @@
+# 项目示例仓库
+[Github] https://github.com/nthack/message-source-usage
+
+[Coding]https://dev.tencent.com/u/nthack5730/p/message-source-usage
+
+
 # 代码分支说明
 - master分支
 
@@ -112,7 +118,7 @@ resourceBundleMessageSource.setBasenames("i18n/messages");
 ### 4.1 写入国际化文件
 根据上面的配置，在`resouces-i18n`下面加入`Resource Bundle`类型文件：
 名称为`messages`，然后加入以下两种类型：
-> zh-CN
+> zh_CN
 > en_US
 
 完成之后会生成下面三个文件：
