@@ -1,9 +1,17 @@
 # 代码分支说明
 - master分支
-主干分支，代码配置`MessageSource`，对应下面`第二章节 - 3.2`
+
+无配置，虽然能用，但是强烈建议使用配置。
+
+- code分支
+
+通過代码配置`MessageSource`，对应下面`第二章节 - 3.2`
 
 - yml分支
-支线分支，使用`yml`文件配置`MessageSource`
+
+通過`yml`文件配置`MessageSource`
+
+
 
 # 一、国际化
 ## 1. 简述
