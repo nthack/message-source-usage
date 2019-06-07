@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 控制台输出格式定制 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%white(%d{MM-dd HH:mm:ss}) %green([%p]) %cyan([%t]) %highlight(%C:%L) : %m %n</Pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志文件输出定制 -->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 日志文件路径名称 -->
+        <file>./logs/messageSource.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 文件日志滚动 -->
+            <fileNamePattern>./logs/messageSource.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <!-- 30天日志滚动，每个文件最大1GB -->
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+
+        <!-- 文件日志格式 -->
+        <encoder>
+            <pattern>%d{MM-dd HH:mm:ss} - [%p] - [%t] - %C:%L : %m %n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Spring日志级别配置 -->
+    <logger name="org.springframework.web">
+        <level value="WARN"/>
+    </logger>
+
+    <!-- 日志级别 -->
+    <logger name="cn.*">
+        <level value="INFO"/>
+    </logger>
+
+
+    <!-- Appender日志级别 -->
+    <root level="INFO">
+        <appender-ref ref="file"/>
+        <appender-ref ref="console"/>
+    </root>
+
+</configuration>
