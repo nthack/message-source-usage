@@ -1,3 +1,9 @@
+# 项目示例仓库
+[Github] https://github.com/nthack/message-source-usage
+
+[Coding]https://dev.tencent.com/u/nthack5730/p/message-source-usage
+
+
 # 代码分支说明
 - master分支
 
